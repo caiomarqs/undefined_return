@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+body{
+    font-family: "Inter", sans-serif;
+}
+
+.bg {
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #023E7D;
+    /* background: radial-gradient(at center, #127AE6, #023F7D); */
+}
+
+.front{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.front > span {
+    color: #1170e1;
+    font-size: 0.75rem;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    width: fit-content;
+}
+
+.front > span > a{
+ text-decoration: none;
+}
+
+.front > span > a{
+ color: #61a8fb;
+}
+
+.front.infos > span{
+    width: unset;
+}
+
+#myThreeJsCanvas {
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+}
