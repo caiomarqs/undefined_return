@@ -15,7 +15,7 @@ const loader = new FontLoader();
 loader.load(
     'src/fonts/InterExtraBold.json', 
     font => {
-        const textGeometry = new TextGeometry('UNDFINED_RETURN', {
+        const textGeometry = new TextGeometry('UNDEFINED_RETURN', {
             font: font,
             size: 3,
             height: 3,
