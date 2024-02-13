@@ -22,35 +22,21 @@ function printTimeZone() {
 let firstClick = 0;
 
 const playMusic = () => {
-    firstClick = firstClick + 1;
-
-    const sound = new Audio("src/audios/miss_you.mp3")
-    sound.loop = true;
-    
-    if(firstClick == 1) {
-        sound.volume = 0.25
+ 
+        const sound = new Audio("src/audios/miss_you.mp3")
+        sound.loop = true;
+        sound.volume = 0.2
         sound.play();
-
         document.getElementById('music-name').innerHTML = "miss_you.mp3";
+        firstClick = firstClick + 1;
         return
-    }
+
 }
 
-document.body.addEventListener("mousemove", (event) => {
-    playMusic();
-})
-
-document.getElementById("myThreeJsCanvas").addEventListener("mousemove", (event) => {
-    playMusic();
-})
-
-
-window.addEventListener("mousemove", (event) => {
-    playMusic();
-})
-
-document.getElementById("myThreeJsCanvas").addEventListener("mousemove", (event) => {
-    playMusic();
+document.body.addEventListener("mousedown", (event) => {
+    if(firstClick < 1) {
+        playMusic();   
+    }
 })
 
 startTime()
