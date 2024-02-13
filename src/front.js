@@ -19,5 +19,39 @@ function printTimeZone() {
         "UTC - " + Intl.DateTimeFormat().resolvedOptions().timeZone   
 }
 
+let firstClick = 0;
+
+const playMusic = () => {
+    firstClick = firstClick + 1;
+
+    const sound = new Audio("src/audios/miss_you.mp3")
+    sound.loop = true;
+    
+    if(firstClick == 1) {
+        sound.volume = 0.25
+        sound.play();
+
+        document.getElementById('music-name').innerHTML = "miss_you.mp3";
+        return
+    }
+}
+
+document.body.addEventListener("mousemove", (event) => {
+    playMusic();
+})
+
+document.getElementById("myThreeJsCanvas").addEventListener("mousemove", (event) => {
+    playMusic();
+})
+
+
+window.addEventListener("mousemove", (event) => {
+    playMusic();
+})
+
+document.getElementById("myThreeJsCanvas").addEventListener("mousemove", (event) => {
+    playMusic();
+})
+
 startTime()
 printTimeZone()
