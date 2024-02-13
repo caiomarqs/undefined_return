@@ -53,6 +53,7 @@ span {
 .controls > span {
     writing-mode: unset;
     position: unset;
+    font-size: 10px;
 }
 
 .tl {
