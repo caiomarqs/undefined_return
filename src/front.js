@@ -74,7 +74,11 @@ let sound = new Audio();
 const playMusic = (index) => {
     sound.pause();
     sound = new Audio(`src/audios/${soundsSources[index]}`);
-    sound.play();
+    
+    if(sound.paused) {
+        sound.play();
+    }
+
     sound.volume = 0.2;
     document.getElementById('music-name').innerHTML = soundsSources[index];
 
