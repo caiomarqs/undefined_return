@@ -94,3 +94,32 @@ span > a{
     left:0;
     z-index: 1;
 }
+
+.music-controls{
+    width: 100%;
+    height: fit-content;
+    margin: 0.5rem 0;
+    padding: 0 .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 2;
+}
+
+.play {
+    margin: 0 0.75rem;
+}
+
+.play > svg, .prev > svg, .next > svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    fill: #1170e1;
+}
+
+.progress {
+    width: 100%;
+    height: 0.125rem;
+    /* background-color: #ffffff1f; */
+    background-color: #1170e1;
+    border-radius: 0.125rem;
+}

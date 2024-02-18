@@ -2,7 +2,6 @@ import * as THREE from 'three';
 
 import { TextGeometry } from 'https://unpkg.com/three@0.161.0/examples/jsm/geometries/TextGeometry.js';
 import { FontLoader } from 'https://unpkg.com/three@0.161.0/examples/jsm/loaders/FontLoader.js';
-// import { TTFLoader } from 'https://unpkg.com/three@0.161.0/examples/jsm/loaders/TTFLoader.js';
 
 import SceneInit from './libs/SceneInit.js';
 
@@ -40,7 +39,6 @@ loader.load(
             textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x 
         );
 
-    
         const textMesh = new THREE.Mesh(textGeometry, textMaterial);
         textGeometry.translate( centerOffset, 0, 0 );
 
