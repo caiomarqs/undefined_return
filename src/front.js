@@ -72,15 +72,16 @@ let index = Math.floor(Math.random() * soundsSources.length);
 let sound = new Audio();
 
 const playMusic = (index) => {
-    sound.pause();
-    sound = new Audio(`src/audios/${soundsSources[index]}`);
     
-    if(sound.paused) {
-        sound.play();
-    }
+    sound.pause();
+    document.querySelector('.play').innerHTML = playButton;
 
+    sound = new Audio(`src/audios/${soundsSources[index]}`);
     sound.volume = 0.2;
     document.getElementById('music-name').innerHTML = soundsSources[index];
+
+    sound.play();
+    document.querySelector('.play').innerHTML = pauseButton;
 
     sound.addEventListener('ended', (_ => {
         index++;
